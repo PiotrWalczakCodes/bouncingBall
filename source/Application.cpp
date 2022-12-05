@@ -5,6 +5,7 @@
 
 #include "windowRender.h"
 #include "entity.h"
+#include "icyMove.h"
 
 
 int main(int argc, char *argv[])
@@ -41,6 +42,8 @@ int main(int argc, char *argv[])
 		}
 
 		planetEntity0.move(winSizeX, winSizeY);
+
+		icyMove(planetEntity0, window);
 
 		window.clear();
 		window.render(planetEntity0);

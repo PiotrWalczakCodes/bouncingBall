@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="Dependencies\INCLUDES\entity.h" />
     <ClInclude Include="Dependencies\INCLUDES\windowRender.h" />
+    <ClInclude Include="Dependencies\INCLUDES\icyMove.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\gfx\Terran.png" />

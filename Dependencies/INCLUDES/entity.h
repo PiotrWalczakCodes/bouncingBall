@@ -9,6 +9,10 @@ public:
 	Entity(float xPosition, float yPosition, SDL_Texture* texture);
 	float getX();
 	float getY();
+
+	void changeX(float change);
+	void changeY(float change);
+
 	SDL_Rect getCurrentFrame();
 	SDL_Texture* getTex();
 	void move(int windowSizeX, int windowSizeY);

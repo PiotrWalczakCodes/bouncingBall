@@ -57,3 +57,13 @@ void Entity::move(int windowSizeX, int windowSizeY)
 	}
 
 }
+
+void Entity::changeX(float change)
+{
+	x = change;
+}
+
+void Entity::changeY(float change)
+{
+	y = change;
+}

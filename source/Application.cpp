@@ -6,6 +6,7 @@
 #include "windowRender.h"
 #include "entity.h"
 
+
 int main(int argc, char *argv[])
 {
 	if (SDL_Init(SDL_INIT_VIDEO) < 0) 

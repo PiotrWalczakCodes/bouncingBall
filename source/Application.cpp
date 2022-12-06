@@ -5,7 +5,8 @@
 
 #include "windowRender.h"
 #include "entity.h"
-#include "icyMove.h"
+#include "move.h"
+#include "renderFloor.h"
 
 
 int main(int argc, char *argv[])
@@ -26,8 +27,17 @@ int main(int argc, char *argv[])
 	RenderWindow window("testWindow", winSizeX, winSizeY);
 
 	SDL_Texture* planetEarth = window.loadTexture("res/gfx/Terran.png");
+	SDL_Texture* floorTex = window.loadTexture("res/gfx/floor.png");
 
-	Entity planetEntity0(100, 50, planetEarth);
+	Entity planetEntity0((winSizeX - 48 * 4) / 2, winSizeY - 4*48*2, planetEarth);
+	Entity floor0(0, 720 - (48 * 4), floorTex);
+	Entity floor1(48 * 4, 720 - (48 * 4), floorTex);
+	Entity floor2(48 * 4 * 2, 720 - (48 * 4), floorTex);
+	Entity floor3(48 * 4 * 3, 720 - (48 * 4), floorTex);
+	Entity floor4(48 * 4 * 4, 720 - (48 * 4), floorTex);
+	Entity floor5(48 * 4 * 5, 720 - (48 * 4), floorTex);
+	Entity floor6(48 * 4 * 6, 720 - (48 * 4), floorTex);
+
 
 	bool gameRunning = true;
 
@@ -41,15 +51,12 @@ int main(int argc, char *argv[])
 				gameRunning = false;
 		}
 
-		planetEntity0.move(winSizeX, winSizeY);
-
-		icyMove(planetEntity0, window);
+		move(planetEntity0, window, winSizeX, winSizeY);
 
 		window.clear();
+		renderFloor(window);
 		window.render(planetEntity0);
 		window.display();
-
-		std::cout << planetEntity0.getX() << "  " << planetEntity0.getY() << std::endl;
 	}
 
 	window.cleanUp();

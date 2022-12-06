@@ -32,7 +32,10 @@
     <ClInclude Include="Dependencies\INCLUDES\entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Dependencies\INCLUDES\icyMove.h">
+    <ClInclude Include="Dependencies\INCLUDES\move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Dependencies\INCLUDES\renderFloor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -7,6 +7,7 @@ class Entity
 {
 public:
 	Entity(float xPosition, float yPosition, SDL_Texture* texture);
+	Entity();
 	float getX();
 	float getY();
 
@@ -15,7 +16,6 @@ public:
 
 	SDL_Rect getCurrentFrame();
 	SDL_Texture* getTex();
-	void move(int windowSizeX, int windowSizeY);
 private:
 	float x, y;
 	SDL_Rect currentFrame;

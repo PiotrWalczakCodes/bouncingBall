@@ -145,8 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Dependencies\INCLUDES\entity.h" />
+    <ClInclude Include="Dependencies\INCLUDES\renderFloor.h" />
     <ClInclude Include="Dependencies\INCLUDES\windowRender.h" />
-    <ClInclude Include="Dependencies\INCLUDES\icyMove.h" />
+    <ClInclude Include="Dependencies\INCLUDES\move.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\gfx\Terran.png" />

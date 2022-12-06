@@ -13,6 +13,11 @@ Entity::Entity(float xPosition, float yPosition, SDL_Texture* texture)
 	
 }
 
+Entity::Entity()
+{
+
+}
+
 float Entity::getX()
 {
 	return x;
@@ -33,30 +38,6 @@ SDL_Texture* Entity::getTex()
 	return tex;
 }
 
-void Entity::move(int windowSizeX, int windowSizeY)
-{
-	const Uint8* state = SDL_GetKeyboardState(NULL);
-
-	float moveSpeed = 0.6;
-
-	if (state[SDL_SCANCODE_W] && y > 0)
-	{
-		y -= moveSpeed;
-	}
-	if (state[SDL_SCANCODE_S] && y < windowSizeY - (48 * 4))
-	{
-		y += moveSpeed;
-	}
-	if (state[SDL_SCANCODE_A] && x > 0)
-	{
-		x -= moveSpeed;
-	}
-	if (state[SDL_SCANCODE_D] && x < windowSizeX - (48 * 4))
-	{
-		x += moveSpeed;
-	}
-
-}
 
 void Entity::changeX(float change)
 {
